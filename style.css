@@ -1,0 +1,49 @@
+/* @font-face for Gotham fonts*/
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham/Gotham Regular.otf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham/Gotham ItalicBold.otf');
+  font-weight: italic-bold;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham/Gotham Medium.otf');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url('assets/fonts/Gotham/Gotham Light.otf');
+  font-weight: lighter;
+}
+
+/* @font-face for Gotham fonts*/
+@font-face {
+  font-family: 'Charter';
+  src: url('assets/fonts/Charter/Charter-Roman-01.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('assets/fonts/Charter/Charter-Italic-02.ttf');
+  font-weight: Italic;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('assets/fonts/Charter/Charter-BoldItalic-03.ttf');
+  font-weight: italic-bold;
+}
+
+@font-face {
+  font-family: 'Charter';
+  src: url('assets/fonts/Charter/Charter-Bold-04.ttf');
+  font-weight: bold;
+}
