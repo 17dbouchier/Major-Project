@@ -2,48 +2,118 @@
 @font-face {
   font-family: 'Gotham';
   src: url('assets/fonts/Gotham/Gotham Regular.otf');
-  font-weight: normal;
+  font-weight: 300;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url('assets/fonts/Gotham/Gotham ItalicBold.otf');
-  font-weight: italic-bold;
+  font-weight: italic;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url('assets/fonts/Gotham/Gotham Medium.otf');
-  font-weight: bold;
+  font-weight: 200;
 }
 
 @font-face {
   font-family: 'Gotham';
   src: url('assets/fonts/Gotham/Gotham Light.otf');
-  font-weight: lighter;
+  font-weight: 100;
 }
 
 /* @font-face for Gotham fonts*/
 @font-face {
   font-family: 'Charter';
   src: url('assets/fonts/Charter/Charter-Roman-01.ttf');
-  font-weight: normal;
+  font-weight: 200;
 }
 
 @font-face {
   font-family: 'Charter';
   src: url('assets/fonts/Charter/Charter-Italic-02.ttf');
-  font-weight: Italic;
+  font-weight: italic;
 }
 
 @font-face {
   font-family: 'Charter';
   src: url('assets/fonts/Charter/Charter-BoldItalic-03.ttf');
-  font-weight: italic-bold;
+  font-weight: 300;
 }
 
 @font-face {
   font-family: 'Charter';
   src: url('assets/fonts/Charter/Charter-Bold-04.ttf');
   font-weight: bold;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+    height: 100%;
+    background: linear-gradient(90deg, #000000 50%, #FFFFFF 50%);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  padding: 5px;
+}
+
+.column {
+  height: 100%;
+  position: relative;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 100%;
+  flex: 1;
+  align-items: center;
+}
+
+.header {
+  margin-top: 20vh;
+  font-size: 6vw;
+  font-family: 'Gotham', serif;
+  font-weight: 300;
+  color: #FF432C
+}
+
+.subheader {
+  margin-top: -2vh;
+  font-size: 5vw;
+  font-family: 'Gotham', serif;
+  font-weight: italic;
+  color: #FF432C;
+}
+
+.SearchBar {
+  outline: none;
+  margin-top: 7vh;
+  height: 10vh;
+  width: 36vw;
+  border-radius: 12px;
+  border: 0px;
+  font-family: 'Charter', serif;
+  font-weight: italic;
+  font-size: 32px;
+  opacity: 1;
+  padding-left: 20px;
+  padding-right: 12px;
+}
+
+.COA {
+  height: 80px;
+  margin-top: 140px;
 }
