@@ -1,3 +1,11 @@
+/*
+  act: #FFE500
+  green: #09BB00
+  labour: #D82C20
+  maori: #970000
+  national: #7B8CFF
+/*
+
 /* @font-face for Gotham fonts*/
 @font-face {
   font-family: 'Gotham Regular';
@@ -85,8 +93,27 @@ body {
   margin-top: 0vh;
   font-size: 56px;
   font-family: 'Gotham Regular', serif;
-  color: #7B8CFF;
   line-height: .9;
+}
+
+.act-header {
+  color: #FFE500;
+}
+
+.green-header {
+  color: #09BB00;
+}
+
+.labour-header {
+  color: #D82C20;
+}
+
+.maori-header {
+  color: #970000;
+}
+
+.national-header {
+  color: #7B8CFF;
 }
 
 .subheader {
@@ -107,17 +134,40 @@ body {
   width: 100%;
 }
 
+.act-icon {
+  border: 5px solid #FFE500;
+}
+
+.green-icon {
+  border: 5px solid #09BB00;
+}
+
+.labour-icon {
+  border: 5px solid #D82C20;
+}
+
+.maori-icon {
+  border: 5px solid #970000;
+}
+
+.national-icon {
+  border: 5px solid #7B8CFF;
+}
+
 .mp-icon {
   margin-top: 32px;
   height: 300px;
   border-radius: 100%;
-  border: 5px solid #7B8CFF;
 }
 
 .party-icon {
   margin-top: 12px;
   height: 56px;
   border-radius: 100%;
+}
+
+.maori-party-icon {
+  border: 4px solid #D9001D;
 }
 
 .listnum {
