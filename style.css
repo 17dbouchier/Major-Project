@@ -1,3 +1,11 @@
+/*
+  act: #FFE500
+  green: #09BB00
+  labour: #D82C20
+  maori: #970000
+  national: #7B8CFF
+/*
+
 /* @font-face for Gotham fonts*/
 @font-face {
   font-family: 'Gotham';
@@ -61,6 +69,13 @@ body {
     background: linear-gradient(90deg, #000000 50%, #FFFFFF 50%);
 }
 
+.logo {
+  position: absolute;
+  left: 24px;
+  top: 12px;
+  height: 64px;
+}
+
 .container {
   display: flex;
   width: 100%;
@@ -112,4 +127,30 @@ body {
 .COA {
   height: 80px;
   margin: 200px;
+}
+
+.mp-icon {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+}
+
+.act-icon {
+  border: solid 2px #FFE500;
+}
+
+.grn-icon {
+  border: solid 2px #09BB00;
+}
+
+.lbr-icon {
+  border: solid 2px #D82C20;
+}
+
+.mao-icon {
+  border: solid 2px #970000;
+}
+
+.nat-icon {
+  border: solid 2px #7B8CFF;
 }
