@@ -56,6 +56,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     height: 100%;
     background: linear-gradient(90deg, #FFFFFF 66.66%, #000000 33.34%);
@@ -64,7 +68,7 @@ body {
 .container {
   display: flex;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   align-content: center;
   justify-content: center;
   padding: 5px;
@@ -213,7 +217,6 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  align-content: center;
   justify-content: center;
   padding: 5px;
   flex-wrap: wrap;
@@ -251,4 +254,95 @@ body {
 .box-icon {
   width: 100px;
   height: 100px;
+}
+
+.stances {
+  background-color: #D44343;
+  width: 100%;
+  height: 100vh;
+}
+
+.voting {
+  background-color: #333333;
+  width: 100%;
+  height: 200vh;
+}
+
+.portfolio {
+  background-color: #FA9917;
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+}
+
+.section-header {
+  padding-top: 24px;
+  padding-left: 24px;
+  font-size: 64px;
+  font-family: 'Gotham Medium', serif;
+  color: #FFFFFF;
+}
+
+.bill {
+  background-color: #FFFFFF;
+  margin: 24px 100px 0 100px;
+  border-radius: 6px;
+  padding-left: 24px;
+}
+
+.bill-header {
+  font-size: 36px;
+  font-family: 'Gotham Medium', serif;
+  padding: 18px 0 0 0;
+}
+
+.bill-mp-icon {
+  border-radius: 100%;
+  border: 4px #09BB00 solid;
+  width: 100px;
+}
+
+.bill-purpose {
+  font-size: 20px;
+  font-family: 'Charter Italic Bold', serif;
+  padding-bottom: 18px;
+  padding-right: 120px;
+}
+
+.votes {
+  font-size: 18px;
+  font-family: 'Charter', serif;
+  color: #000000;
+  padding-bottom: 14px;
+}
+
+.bold-italic {
+  font-family: 'Charter Italic Bold', serif;
+}
+
+.bold {
+  font-family: 'Charter Bold', serif;
+}
+
+.favour {
+  background-color: #09BB00;
+  color: #FFFFFF;
+  font-family: 'Charter Bold', serif;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+.against {
+  background-color: #FF0000;
+  color: #FFFFFF;
+  font-family: 'Charter Bold', serif;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+.abstain {
+  background-color: #FFE500;
+  font-family: 'Charter Bold', serif;
+  padding: 4px;
+  border-radius: 3px;
 }
