@@ -65,76 +65,50 @@ body {
     background: linear-gradient(90deg, #FFFFFF 66.66%, #000000 33.34%);
 }
 
-/* Styles and positions the fixed-to-top navigation menu */
 nav {
-	top: 0;
+	width: 100%;
+	height: 75px;
+	background-color: rgba(0,0,0,0.7);
+	line-height: 75px;
+  padding: 0 14px;
 	position: fixed;
-  width: 100%;
-  background-color: rgba(0,0,0,0.8);
-  overflow: auto;
 	z-index: 1;
-  transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in-out;
 }
 
-/* Navigation links */
-nav a {
+nav ul {
+	float: left;
+}
+
+nav ul li {
+	display: inline-block;
+	list-style: none;
+}
+
+nav ul li a {
+	color:#fff;
   font-family: 'Gotham Light', serif;
-	position: relative;
-  float: left;
-  padding: 15px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 20px;
-  text-align: center;
+	text-decoration: none;
+	font-size: 18px;
+	text-transform: uppercase;
+	padding: 0px 16px;
 }
 
-/* Sets the parameters for the 'underline' effect for nav links */
-nav a::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  transform: scaleX(0);
-  height: 2px;
-  bottom: 14px;
-  left: 0;
-  background-color: white;
-  transform-origin: center center;
-  transition: transform 0.25s ease-out;
+nav ul li a:hover{
+	color:#c0d96f;
 }
 
-/* Shows the 'underline' effect when user hovers on nav link */
-nav a:hover::before {
-  transform: scaleX(0.8);
-}
-
-/* Further highlights nav link when user hovers */
-nav a:hover {
-  opacity: 1;
-}
-
-/* Styles the current/active nav link w/ underline */
-nav a.active::before {
-	transform: scaleX(1);
-}
-
-/* Styles the current/active nav link w/ white colour text */
-nav a.active {
-	opacity: 1;
-}
-
-.act-mp-nav a::before {
-  background-color: #FFE500;
-}
-
-.act-mp-nav {
-  font-family: 'Gotham Italic Bold', serif;
-  color: #FFE500;
+.nav-mp-icon {
+  width: 48px;
+  border-radius: 100px;
+  border: 2px solid;
+  vertical-align: middle;
 }
 
 .logo {
   width: 56px;
   padding-bottom: -8px;
-  margin-top: 2px;
+  vertical-align: middle;
 }
 
 .container {
