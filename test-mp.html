@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="mp.css">
+  <style>
+    html, body, #radar {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .bill {
+      position: relative;
+      background-color: #FFFFFF;
+      margin: 24px auto;
+      margin-top: 24px;
+      border-radius: 6px;
+      width: 96%;
+      padding: 0;
+    }
+    /* Style the button that is used to open and close the collapsible content */
+    .bill-button {
+      cursor: pointer;
+      position: relative;
+      background-color: #FFFFFF;
+      border-radius: 6px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: all 0.2s;
+    }
+
+    .bill-header {
+      padding: 24px;
+    }
+
+    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+    .bill-button:hover {
+      background-color: #ccc;
+    }
+
+    /* Style the collapsible content. Note: hidden by default */
+    .content {
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      border-radius: 6px;
+      padding-left: 24px;
+    }
+
+    .bill-voting-summary-count {
+      font-size: 18px;
+      font-family: 'Charter Italic Bold', serif;
+      color: rgba(0,0,0,0.5);
+      padding-left: 24px;
+      position: absolute;
+      bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div id="radar"></div>
+  <div class="voting">
+    <div class="bill-section">
+      <div class="bill">
+        <button type="button" class="bill-button">
+          <h2 class="bill-header">Zero Carbon Act 2019</h2>
+          <p class="bill-voting-summary-count">(2 against, 1 abstain)</p>
+          <img src="assets/mps-small/74-shaw-grn.jpg" alt="" class="bill-mp-icon grn-border">
+        </button>
+        <div class="content">
+          <p class="bill-purpose">
+            "The purpose of this bill is to provide a framework for New Zealand to develop and implement climate change policies in support of the Paris Agreement."
+          </p>
+
+          <p class="votes">
+            In the <span class="bold-italic">first reading,</span> Seymour voted <span class="against">against</span> the <span class="bold">Zero Carbon Act 2019.</span>
+          </p>
+          <p class="votes">
+            In the <span class="bold-italic">second reading,</span> Seymour voted <span class="against">against</span> the <span class="bold">Zero Carbon Act 2019.</span>
+          </p>
+          <p class="votes">
+            In the <span class="bold-italic">third reading,</span> Seymour voted <span class="abstain">did not vote</span> on the <span class="bold">Zero Carbon Act 2019.</span>
+          </p>
+        </div>
+      </div>
+
+      <div class="bill">
+        <button type="button" class="bill-button">
+          <h2 class="bill-header">Zero Carbon Act 2019</h2>
+          <p class="bill-voting-summary-count">Seymour voted against this bill.</p>
+          <img src="assets/mps-small/74-shaw-grn.jpg" alt="" class="bill-mp-icon grn-border">
+        </button>
+        <div class="content">
+          <p class="bill-purpose">
+            "The purpose of this bill is to provide a framework for New Zealand to develop and implement climate change policies in support of the Paris Agreement."
+          </p>
+
+          <p class="votes">
+            In the <span class="bold-italic">first reading,</span> Seymour voted <span class="against">against</span> the <span class="bold">Zero Carbon Act 2019.</span>
+          </p>
+          <p class="votes">
+            In the <span class="bold-italic">second reading,</span> Seymour voted <span class="against">against</span> the <span class="bold">Zero Carbon Act 2019.</span>
+          </p>
+          <p class="votes">
+            In the <span class="bold-italic">third reading,</span> Seymour voted <span class="abstain">did not vote</span> on the <span class="bold">Zero Carbon Act 2019.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+  var coll = document.getElementsByClassName("bill-button");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+  }
+</script>
+<script src="radar.js"></script>
+
+</html>

@@ -1,0 +1,115 @@
+<html>
+  <head>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.7.1/js/anychart-radar.min.js"></script>
+    <style type="text/css">
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #container {
+        width: 50%;
+        height: 50%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="radar"></div>
+    <script>
+      anychart.onDocumentReady(function () {
+        var dseymour = [
+          {x: "Environment & Climate Change", value: 19},
+          {x: "Progressive Social Reforms", value: 87},
+          {x: "Health", value: 53},
+          {x: "Infrastructure & Primary Industries", value: 76},
+          {x: "Education", value: 45},
+          {x: "Maori Affairs", value: 26},
+          {x: "Law & Justice", value: 61},
+          {x: "Economic Reform & Employment", value: 89}
+        ];
+
+        var jardern = [
+          {x: "Environment & Climate Change", value: 65},
+          {x: "Progressive Social Reforms", value: 100},
+          {x: "Health", value: 71},
+          {x: "Infrastructure & Primary Industries", value: 49},
+          {x: "Education", value: 78},
+          {x: "Maori Affairs", value: 55},
+          {x: "Law & Justice", value: 78},
+          {x: "Economic Reform & Employment", value: 55}
+        ];
+
+        var jshaw = [
+          {x: "Environment & Climate Change", value: 100},
+          {x: "Progressive Social Reforms", value: 82},
+          {x: "Health", value: 71},
+          {x: "Infrastructure & Primary Industries", value: 59},
+          {x: "Education", value: 78},
+          {x: "Maori Affairs", value: 74},
+          {x: "Law & Justice", value: 45},
+          {x: "Economic Reform & Employment", value: 50}
+        ];
+
+        var jcollins = [
+          {x: "Environment & Climate Change", value: 45},
+          {x: "Progressive Social Reforms", value: 40},
+          {x: "Health", value: 32},
+          {x: "Infrastructure & Primary Industries", value: 95},
+          {x: "Education", value: 45},
+          {x: "Maori Affairs", value: 42},
+          {x: "Law & Justice", value: 93},
+          {x: "Economic Reform & Employment", value: 82}
+        ];
+
+        var rwaititi = [
+          {x: "Environment & Climate Change", value: 85},
+          {x: "Progressive Social Reforms", value: 50},
+          {x: "Health", value: 50},
+          {x: "Infrastructure & Primary Industries", value: 21},
+          {x: "Education", value: 45},
+          {x: "Maori Affairs", value: 100},
+          {x: "Law & Justice", value: 42},
+          {x: "Economic Reform & Employment", value: 76}
+        ];
+
+        // create radar chart
+        var chart = anychart.radar();
+
+        // set chart title
+        chart.title("Stances")
+          // set legend
+          .legend(true);
+
+        // set chart yScale settings
+        chart.yScale()
+          .minimum(0)
+          .maximum(100)
+          .ticks({'interval':10});
+
+        // color alternating cells
+        chart.yGrid().palette(["gray 0.1", "gray 0.2"]);
+
+        // create first series
+        chart.area(dseymour).name('David Seymour').markers(true).fill("#FFE500", 0.2).stroke("#FFE500")
+        // create second series
+        chart.area(jardern).name('Jacinda Ardern').markers(false).fill("#D82C20", 0.2).stroke("#D82C20")
+        // create third series
+        chart.area(jshaw).name('James Shaw').markers(false).fill("#09BB00", 0.2).stroke("#09BB00")
+        // create fourth series
+        chart.area(jcollins).name('Judith Collins').markers(false).fill("#7B8CFF", 0.2).stroke("#7B8CFF")
+        // create fifth series
+        chart.area(rwaititi).name('Rawiri Waititi').markers(false).fill("#970000", 0.2).stroke("#970000")
+
+        // set container id for the chart
+        chart.container('radar');
+        // initiate chart drawing
+        chart.draw();
+      });
+    </script>
+  </body>
+</html>
