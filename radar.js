@@ -59,11 +59,6 @@ anychart.onDocumentReady(function () {
   // create radar chart
   var chart = anychart.radar();
 
-  // set chart title
-  chart.title("Stances")
-    // set legend
-    .legend(true);
-
   // set chart yScale settings
   chart.yScale()
     .minimum(0)
