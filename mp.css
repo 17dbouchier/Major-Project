@@ -347,7 +347,7 @@ nav ul li a:hover{
 #radar {
   margin-left: 8px;
   margin-top: 32px;
-  height: 50%;
+  height: 50.6314%;
   width: 50%;
   border-radius: 5px;
   background-color: #FFFFFF;
@@ -416,7 +416,6 @@ nav ul li a:hover{
 */
 
 .social-issues-section {
-  background-color: #ebff8a;
   padding: 5px;
   padding-bottom: 32px;
   width: 80vw;
@@ -426,7 +425,7 @@ nav ul li a:hover{
 }
 
 .social-issues-section h1 {
-  color: #000000;
+  color: #ffffff;
 }
 
 /*
@@ -526,6 +525,10 @@ nav ul li a:hover{
   color: #09BB00;
 }
 
+.yellow {
+  color: #FFE500;
+}
+
 .bill-purpose {
   font-size: 20px;
   font-family: 'Charter Italic Bold', serif;
@@ -538,6 +541,7 @@ nav ul li a:hover{
   font-family: 'Charter', serif;
   color: #000000;
   padding-bottom: 14px;
+  padding-right: 100px;
 }
 
 .bold-italic {
@@ -592,4 +596,60 @@ nav ul li a:hover{
   font-family: '', serif;
   padding: 4px;
   border-radius: 3px;
+}
+
+.bill {
+  position: relative;
+  background-color: #FFFFFF;
+  margin: 24px auto;
+  margin-top: 24px;
+  border-radius: 6px;
+  width: 96%;
+  padding: 0;
+}
+/* Style the button that is used to open and close the collapsible content */
+.bill-button {
+  cursor: pointer;
+  position: relative;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.bill-header {
+  padding: 24px;
+  padding-right: 100px;
+}
+
+.small-bill-header {
+  font-size: 28px;
+  line-height: 28px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.bill-button:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  background-color: white;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  border-radius: 6px;
+  padding-left: 24px;
+}
+
+.bill-voting-summary-count {
+  font-size: 18px;
+  font-family: 'Charter Italic Bold', serif;
+  color: rgba(0,0,0,0.5);
+  padding-left: 24px;
+  position: absolute;
+  bottom: 8px;
 }
